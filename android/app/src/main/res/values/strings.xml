@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">Dalle - Create art with AI</string>
+
+<string name="facebook_app_id">953707892336215</string>
+<string name="fb_login_protocol_scheme">fb953707892336215</string>
+<string name="facebook_client_token">6ff49a2052ff2096a1fb13c1c08aca53</string>
+    <string name="default_notification_channel_id">001</string>
+
+</resources>
