@@ -27,15 +27,6 @@ class AdContentLarge implements GoogleMobileAdsPlugin.NativeAdFactory {
         NativeAdView nativeAdView = (NativeAdView) LayoutInflater.from(context)
                 .inflate(R.layout.ad_content_large, null);
 
-
-
-//    attribution
-
-        // TextView attributionViewSmall = nativeAdView
-        //         .findViewById(R.id.native_ad_attribution_small);
-
-
-        // attributionViewSmall.setVisibility(View.VISIBLE);
 // icon
 
          nativeAdView.setIconView(nativeAdView.findViewById(R.id.ad_icon_imageview));
@@ -72,27 +63,6 @@ class AdContentLarge implements GoogleMobileAdsPlugin.NativeAdFactory {
             ((TextView)nativeAdView.getBodyView()).setText(nativeAd.getBody());
             nativeAdView.getBodyView().setVisibility(View.VISIBLE);
         }
-
-//    advertiser name
-        // nativeAdView.setAdvertiserView(nativeAdView.findViewByIdR.id.native_ad_advertiser));
-        // if(nativeAd.getAdvertiser()==null){
-        //     nativeAdView.getAdvertiserView().setVisibility(View.GONE);
-        // }else {
-        //     ((TextView)nativeAdView.getAdvertiserView()).setText(nativeAd.getAdvertiser());
-        //     nativeAdView.getAdvertiserView().setVisibility(View.VISIBLE);
-        // }
-//   ratingbar
-        // nativeAdView.setStarRatingView(nativeAdView.findViewById(R.id.native_ad_rating));
-        // if(nativeAd.getStarRating()==null){
-        //     nativeAdView.getStarRatingView().setVisibility(View.INVISIBLE);
-        // }else{
-        //     ((RatingBar)nativeAdView.getStarRatingView()).setRating(nativeAd.getStarRating().floatValue());
-        //     nativeAdView.getStarRatingView().setVisibility(View.VISIBLE);
-
-        // }
-
-
-
 
         nativeAdView.setNativeAd(nativeAd);
 
