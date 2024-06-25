@@ -16,7 +16,6 @@ public class MainActivity extends FlutterActivity {
         GoogleMobileAdsPlugin.registerNativeAdFactory(flutterEngine, "listTile",
                 new ListTileNativeAdFactory(getContext()));
 
-
         GoogleMobileAdsPlugin.registerNativeAdFactory(flutterEngine, "medium",
                 new Medium(getContext()));
 
