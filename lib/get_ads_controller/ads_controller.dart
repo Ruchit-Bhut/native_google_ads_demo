@@ -10,19 +10,20 @@ class MyController extends GetxController {
 
   loadAd() {
     nativeAd = NativeAd(
-        adUnitId: adUnitId,
-
-        listener: NativeAdListener(
-          onAdLoaded: (ad) {
-            isAdLoaded.value = true;
-            log("Ad Loaded");
-          },
-          onAdFailedToLoad: (ad, error) {
-            isAdLoaded.value = false;
-          },
-        ),
-        request: const AdRequest(),
-        nativeTemplateStyle: NativeTemplateStyle(templateType: TemplateType.small));
+      adUnitId: adUnitId,
+      listener: NativeAdListener(
+        onAdLoaded: (ad) {
+          isAdLoaded.value = true;
+          log("Ad Loaded");
+        },
+        onAdFailedToLoad: (ad, error) {
+          isAdLoaded.value = false;
+        },
+      ),
+      request: const AdRequest(),
+      nativeTemplateStyle:
+          NativeTemplateStyle(templateType: TemplateType.small),
+    );
     nativeAd!.load();
   }
 

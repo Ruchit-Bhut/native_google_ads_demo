@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:my_semple_ads/home_native_ad_example.dart';
-import 'package:my_semple_ads/native_ad_example.dart';
-import 'package:my_semple_ads/native_ads_factory_example.dart';
+import 'package:my_semple_ads/native_ads/home_native_ad_example.dart';
+import 'package:my_semple_ads/native_ads/native_ad_example.dart';
+import 'package:my_semple_ads/native_ads/native_ads_factory_example.dart';
 import 'package:my_semple_ads/screens/second_screen.dart';
 
 class HomePage extends StatefulWidget {
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
     if (_interstitialAd != null) {
       _interstitialAd!.show();
       _interstitialAd = null;
-      _loadInterstitialAd();  // Reload ad
+      _loadInterstitialAd(); // Reload ad
     }
   }
 
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
     if (_interstitialVideoAd != null) {
       _interstitialVideoAd!.show();
       _interstitialVideoAd = null;
-      _loadInterstitialVideoAd();  // Reload ad
+      _loadInterstitialVideoAd(); // Reload ad
     }
   }
 
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
         onUserEarnedReward: (AdWithoutView ad, RewardItem reward) {},
       );
       _rewardedAd = null;
-      _loadRewardedAd();  // Reload ad
+      _loadRewardedAd(); // Reload ad
     }
   }
 
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
         onUserEarnedReward: (AdWithoutView ad, RewardItem reward) {},
       );
       _rewardedInterstitialAd = null;
-      _loadRewardedInterstitialAd();  // Reload ad
+      _loadRewardedInterstitialAd(); // Reload ad
     }
   }
 
@@ -182,7 +182,7 @@ class _HomePageState extends State<HomePage> {
     if (_interstitialAd != null) {
       _interstitialAd!.show();
       _interstitialAd = null;
-      _loadInterstitialAd();  // Reload ad
+      _loadInterstitialAd(); // Reload ad
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const SecondScreen()),
@@ -245,28 +245,34 @@ class _HomePageState extends State<HomePage> {
                   child: const Text('Go to Second Screen'),
                 ),
                 ElevatedButton(
-                  onPressed:(){
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const NativeAdExample()),
+                      MaterialPageRoute(
+                        builder: (context) => const NativeAdExample(),
+                      ),
                     );
                   },
                   child: const Text('Go to Native Ads Screen'),
                 ),
                 ElevatedButton(
-                  onPressed:(){
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const HomeNativeAdExample()),
+                      MaterialPageRoute(
+                        builder: (context) => const HomeNativeAdExample(),
+                      ),
                     );
                   },
                   child: const Text('Home Native Ads '),
                 ),
                 ElevatedButton(
-                  onPressed:(){
+                  onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const NativeAdFactoryExample()),
+                      MaterialPageRoute(
+                        builder: (context) => const NativeAdFactoryExample(),
+                      ),
                     );
                   },
                   child: const Text('Native Ads Factory'),

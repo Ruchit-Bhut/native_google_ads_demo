@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:my_semple_ads/ads_controller.dart';
+import 'package:my_semple_ads/get_ads_controller/ads_controller.dart';
 
 class ScreenThree extends StatefulWidget {
   const ScreenThree({super.key});

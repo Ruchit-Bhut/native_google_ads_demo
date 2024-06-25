@@ -50,9 +50,26 @@ class NativeAdFactoryExampleState extends State<NativeAdFactoryExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff4a536c),
       appBar: AppBar(
-        title: const Text('Flutter Native Ad'),
+        backgroundColor: const Color(0xff4a536c),
+        title: const Text(
+          'Flutter Native Ads Factory',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -70,11 +87,17 @@ class NativeAdFactoryExampleState extends State<NativeAdFactoryExample> {
               );
             } else {
               return ListTile(
-                title: Text('Item ${index + 1}'),
+                title: Text(
+                  'Item ${index + 1}',
+                  style: const TextStyle(color: Colors.white),
+                ),
                 leading: const FlutterLogo(
                   size: 25,
                 ),
-                subtitle: Text('Sub Title for item ${index + 1}'),
+                subtitle: Text(
+                  'Sub Title for item ${index + 1}',
+                  style: const TextStyle(color: Colors.white70),
+                ),
               );
             }
           },

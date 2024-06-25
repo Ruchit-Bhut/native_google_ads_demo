@@ -75,7 +75,9 @@ class SecondScreenState extends State<SecondScreen> {
           });
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const ScreenThree()),
+            MaterialPageRoute(
+              builder: (context) => const ScreenThree(),
+            ),
           );
         },
       ),
@@ -89,14 +91,18 @@ class SecondScreenState extends State<SecondScreen> {
           ad.dispose();
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const ScreenThree()),
+            MaterialPageRoute(
+              builder: (context) => const ScreenThree(),
+            ),
           );
         },
         onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
           ad.dispose();
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const ScreenThree()),
+            MaterialPageRoute(
+              builder: (context) => const ScreenThree(),
+            ),
           );
         },
       );
@@ -105,7 +111,9 @@ class SecondScreenState extends State<SecondScreen> {
     } else {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const ScreenThree()),
+        MaterialPageRoute(
+          builder: (context) => const ScreenThree(),
+        ),
       );
     }
   }
