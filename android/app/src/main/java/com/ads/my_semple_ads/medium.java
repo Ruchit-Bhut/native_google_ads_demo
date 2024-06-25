@@ -22,7 +22,6 @@ class Medium implements GoogleMobileAdsPlugin.NativeAdFactory {
         this.context = context;
     }
 
-
     public  NativeAdView createNativeAd(NativeAd nativeAd, Map<String, Object> customOptions) {
         NativeAdView nativeAdView = (NativeAdView) LayoutInflater.from(context)
                 .inflate(R.layout.medium, null);
@@ -54,7 +53,6 @@ class Medium implements GoogleMobileAdsPlugin.NativeAdFactory {
             ((TextView)nativeAdView.getBodyView()).setText(nativeAd.getBody());
             nativeAdView.getBodyView().setVisibility(View.VISIBLE);
         }
-
 
         nativeAdView.setNativeAd(nativeAd);
 
