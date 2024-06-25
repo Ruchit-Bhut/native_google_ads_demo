@@ -25,11 +25,6 @@ class HomeNativeAdFactory : FLTNativeAdFactory {
         (nativeAdView.callToActionView as? UIButton)?.titleLabel?.numberOfLines = 1
         (nativeAdView.callToActionView as? UIButton)?.titleLabel?.textColor = .white
         nativeAdView.callToActionView?.isHidden = nativeAd.callToAction == nil
-//        (nativeAdView.iconView as! UIImageView).image = nativeAd.icon?.image
-//        nativeAdView.iconView!.isHidden = nativeAd.icon == nil
-
-//        (nativeAdView.iconView as! UIImageView).image = nativeAd.icon?.image
-//        nativeAdView.iconView!.isHidden = nativeAd.icon == nil
 
         nativeAdView.callToActionView?.isUserInteractionEnabled = false
 

@@ -18,12 +18,6 @@ class NativeAdsFactory : FLTNativeAdFactory {
 
         nativeAdView.mediaView?.mediaContent = nativeAd.mediaContent
 
-//        (nativeAdView.iconView as! UIImageView).image = nativeAd.icon?.image
-//        nativeAdView.iconView!.isHidden = nativeAd.icon == nil
-
-//        (nativeAdView.iconView as! UIImageView).image = nativeAd.icon?.image
-//        nativeAdView.iconView!.isHidden = nativeAd.icon == nil
-
         nativeAdView.callToActionView?.isUserInteractionEnabled = false
 
         nativeAdView.nativeAd = nativeAd
