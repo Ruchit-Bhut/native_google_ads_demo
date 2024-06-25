@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -39,7 +40,9 @@ class HomeNativeAdExampleState extends State<HomeNativeAdExample> {
         },
         onAdFailedToLoad: (ad, error) {
           ad.dispose();
-          print('failed to load the ad ${error.message}, ${error.code}');
+          if (kDebugMode) {
+            print('failed to load the ad ${error.message}, ${error.code}');
+          }
         },
       ),
     );

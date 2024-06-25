@@ -130,9 +130,26 @@ class SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xff4a536c),
       appBar: AppBar(
+        backgroundColor: const Color(0xff4a536c),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+        ),
         forceMaterialTransparency: true,
-        title: const Text('Second Screen'),
+        title: const Text(
+          'Second Screen',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Stack(
         children: [
@@ -148,7 +165,9 @@ class SecondScreenState extends State<SecondScreen> {
                         height: bannerAd.size.height.toDouble(),
                         width: bannerAd.size.width.toDouble(),
                         child: const Center(
-                          child: CircularProgressIndicator(),
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                          ),
                         ),
                       )
                     : Container(
@@ -164,6 +183,10 @@ class SecondScreenState extends State<SecondScreen> {
                   },
                   title: Text(
                     'Item ${index + 1}',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 );
               }
@@ -171,7 +194,9 @@ class SecondScreenState extends State<SecondScreen> {
           ),
           if (_isAdLoading)
             const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: Colors.white,
+              ),
             ),
         ],
       ),

@@ -209,9 +209,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white30,
+      backgroundColor: const Color(0xff4a536c),
       appBar: AppBar(
-        backgroundColor: Colors.white24,
+        backgroundColor: const Color(0xff4a536c),
         title: const Text(
           'Google Mobile Ads',
           style: TextStyle(color: Colors.white),
