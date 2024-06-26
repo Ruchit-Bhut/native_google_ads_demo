@@ -33,4 +33,3 @@ class HomeNativeAdFactory : FLTNativeAdFactory {
         return nativeAdView
     }
 }
-
