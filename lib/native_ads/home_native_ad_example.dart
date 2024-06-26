@@ -65,7 +65,7 @@ class HomeNativeAdExampleState extends State<HomeNativeAdExample> {
         ),
         centerTitle: true,
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.of(context).pop();
           },
           child: const Icon(
@@ -80,13 +80,13 @@ class HomeNativeAdExampleState extends State<HomeNativeAdExample> {
           child: isLoaded
               ? Container(
                   alignment: Alignment.center,
-                  height: 300,
+                  height: Platform.isAndroid ? 300 : 100,
                   color: Colors.black12,
                   child: AdWidget(ad: _ad),
                 )
               : const CircularProgressIndicator(
-            color: Colors.white,
-          ),
+                  color: Colors.white,
+                ),
         ),
       ),
     );
